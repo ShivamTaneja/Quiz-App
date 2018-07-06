@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    tools:context=".MainActivity"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:stretchColumns="*"
+        >
+    <TableRow
+        android:layout_margin="5dp"
+        >
+        <Button
+            android:id="@+id/btn_Android"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/android"
+            />
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_Xml"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            android:background="@drawable/xml"
+
+            />
+    </TableRow>
+    <Button
+        android:id="@+id/btn_Cpp"
+        android:layout_height="250dp"
+        android:layout_weight="1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:background="@drawable/cpp"
+
+        />
+
+    <TableRow
+        android:layout_margin="5dp"
+
+        >
+        <Button
+            android:id="@+id/btn_Sql"
+            android:background="@drawable/sql"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btn_CoreJava"
+            android:background="@drawable/corejava"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            />
+    </TableRow>
+    </TableLayout>
+</ScrollView>
+
