@@ -11,4 +11,8 @@
     <color name="light__blue">#B3E5FC</color>
     <color name="lightgreen">#E8F5E9</color>
     <color name="lime">#F9FBE7</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="black">#000000</color>
+
 </resources>

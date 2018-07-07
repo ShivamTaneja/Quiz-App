@@ -13,52 +13,76 @@
         android:stretchColumns="*"
         >
     <TableRow
-        android:layout_margin="5dp"
         >
         <Button
             android:id="@+id/btn_Android"
+            android:text="@string/android"
+            android:drawableTop="@drawable/android"
             style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/white"
+            android:textSize="22sp"
             android:layout_height="200dp"
-            android:layout_weight="1"
-            android:background="@drawable/android"
+            android:padding="10dp"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
             />
 
         <Button
             android:id="@+id/btn_Xml"
+            android:text="@string/xml"
+            android:drawableTop="@drawable/xml"
             style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/white"
+            android:textSize="22sp"
             android:layout_height="200dp"
-            android:layout_weight="1"
-            android:background="@drawable/xml"
-
+            android:padding="10dp"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
             />
     </TableRow>
-    <Button
-        android:id="@+id/btn_Cpp"
-        android:layout_height="250dp"
-        android:layout_weight="1"
-        style="?android:attr/buttonBarButtonStyle"
-        android:background="@drawable/cpp"
-
-        />
-
-    <TableRow
-        android:layout_margin="5dp"
-
-        >
         <Button
             android:id="@+id/btn_Sql"
-            android:background="@drawable/sql"
+            android:text="@string/sql"
+            android:drawableLeft= "@drawable/sql"
+            android:drawableStart="@drawable/sql"
             style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/white"
+            android:textSize="38sp"
             android:layout_height="200dp"
-            android:layout_weight="1"
+            android:padding="20dp"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"
             />
+
+    <TableRow
+        >
+        <Button
+            android:id="@+id/btn_Cpp"
+            android:text="@string/cpp"
+            android:drawableTop="@drawable/cpp"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/white"
+            android:textSize="22sp"
+            android:layout_height="200dp"
+            android:padding="10dp"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+
+            />
+
 
         <Button
             android:id="@+id/btn_CoreJava"
-            android:background="@drawable/corejava"
+            android:text="@string/core_java"
+            android:drawableTop= "@drawable/core_java"
             style="?android:attr/buttonBarButtonStyle"
+            android:background="@color/white"
+            android:textSize="22sp"
             android:layout_height="200dp"
-            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_margin="2dp"
+            android:textColor="@color/black"
+
             />
     </TableRow>
     </TableLayout>

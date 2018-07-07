@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Quiz App</string>
-    <string name="c">C++</string>
+    <string name="cpp">Cpp</string>
+    <string name="android">Android</string>
+    <string name="xml">Xml</string>
+    <string name="sql">Sql</string>
+    <string name="core_java">Core Java</string>
 </resources>
