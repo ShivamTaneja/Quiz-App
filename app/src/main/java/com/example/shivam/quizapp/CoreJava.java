@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -14,7 +16,9 @@ public class CoreJava extends AppCompatActivity {
     RadioButton r1, r2, r3, r4, r5, r6, r7, r8;
     RadioGroup rg1, rg2;
     int answer = 0;
-
+    EditText et1;
+    CheckBox c1,c2,c3,c4,c5;
+    Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +35,79 @@ public class CoreJava extends AppCompatActivity {
 
         rg1 = findViewById(R.id.rg1);
         rg2 = findViewById(R.id.rg2);
+
+        et1 = findViewById(R.id.ed);
+
+        c1 = findViewById(R.id.c1);
+        c2 = findViewById(R.id.c2);
+        c3 = findViewById(R.id.c3);
+        c4 = findViewById(R.id.c4);
+        c5 = findViewById(R.id.c5);
+
+        b1 = findViewById(R.id.btn);
+
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String et = "",str="Java Virtual Machine";
+                str=str.replaceAll("\\s+","");
+                et = et1.getText().toString();
+                et=et.replaceAll("\\s+","");
+                if(et.equals(""))
+                {
+                        Toast.makeText(getApplicationContext(),"Invalid Input",Toast.LENGTH_SHORT).show();
+
+                }
+                else if(str.equalsIgnoreCase(et) )
+                {
+                    Toast.makeText(getApplicationContext(),"Correct ",Toast.LENGTH_SHORT).show();
+
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Incorrect  ",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+
+
+
    }
+   public void  onCheckboxClicked(View view) {
+       // Is the button now checked?
+       boolean checked = ((CheckBox) view).isChecked();
+       switch (view.getId()) {
+           case R.id.c1:
+               if (checked) {
+                   Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
+                   break;
+               }
+           case R.id.c2:
+               if (checked) {
+                   Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
+                   break;
+               }
+           case R.id.c3:
+               if (checked) {
+                   Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   break;
+               }
+           case R.id.c4:
+               if (checked) {
+                   Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   break;
+               }
+           case R.id.c5:
+               if (checked) {
+                   Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   break;
+               }
+       }
+   }
+
 
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?

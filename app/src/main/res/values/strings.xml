@@ -38,4 +38,13 @@
     <string name="optbyte">byte</string>
     <string name="optfloat">float</string>
     <string name="none_of_the_mentioned">None of the mentioned</string>
+    <string name="what_is_jvm">What is JVM ?</string>
+    <string name="type_your_answer">Type your answer</string>
+    <string name="checkboxques">Which two are valid constructors for Thread? </string>
+    <string name="thread_runnable_r_int_priority">Thread(Runnable r, int priority)</string>
+    <string name="thread_runnable_r_threadgroup_g">Thread(Runnable r, ThreadGroup g)</string>
+    <string name="thread_int_priority">Thread(int priority)</string>
+    <string name="thread">Thread()</string>
+    <string name="thread_runnable_r_string_name">Thread(Runnable r, String name)</string>
+    <string name="checkanswer">Check your answer</string>
 </resources>
