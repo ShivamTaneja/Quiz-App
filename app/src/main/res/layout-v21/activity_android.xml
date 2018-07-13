@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/mehrun"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/android_quiz"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:padding="15dp"
+
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_Blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q1"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+
+                />
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oncreateoptionsmenu"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+                    />
+                <RadioButton
+                    android:id="@+id/b2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oncreatecontextmenu"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+
+                    />
+                <RadioButton
+                    android:id="@+id/b3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/oncreatemenu"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+
+                    />
+                <RadioButton
+                    android:id="@+id/b4"
+                    android:buttonTint="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/onmenucreated"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_Blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q2"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+
+                />
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/b5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/findviewbyreference_int_id"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    android:id="@+id/b6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/findviewbyid_int_id"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+
+                <RadioButton
+                    android:id="@+id/b7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/findviewbyid_string_id"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+
+                    />
+                <RadioButton
+                    android:id="@+id/b8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/retrieveresourcebyid_int_id"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_Blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q3"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+
+                />
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/b9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    android:id="@+id/b10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activity"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+
+                <RadioButton
+                    android:id="@+id/b11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/layout"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+
+                    />
+                <RadioButton
+                    android:id="@+id/b12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contetnt_provider"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_Blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/q4"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+
+                />
+            <RadioGroup
+                android:id="@+id/rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <RadioButton
+                    android:id="@+id/b13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activate_and_activity"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+                <RadioButton
+                    android:id="@+id/b14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activate_a_service"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    />
+
+                <RadioButton
+                    android:id="@+id/b15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activate_a_broadcast_receiver"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+
+
+                    />
+                <RadioButton
+                    android:id="@+id/b16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/activate_a_sqlite_db_connection"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
+                    android:onClick="onRadioButtonClicked"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/light_Blue"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
