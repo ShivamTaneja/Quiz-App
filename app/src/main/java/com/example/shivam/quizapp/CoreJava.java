@@ -1,8 +1,8 @@
 package com.example.shivam.quizapp;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -11,163 +11,174 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class CoreJava extends AppCompatActivity {
+class CoreJava extends AppCompatActivity {
 
-    RadioButton r1, r2, r3, r4, r5, r6, r7, r8;
-    RadioGroup rg1, rg2;
-    int answer = 0;
-    EditText et1;
-    CheckBox c1,c2,c3,c4,c5;
-    Button b1;
+    Button btn_submit,btn_check_txt_answer;
+
+    RadioButton radiobutton1,radiobutton2,radiobutton3,radiobutton4,radiobutton5,radiobutton6,radiobutton7,radiobutton8;
+    RadioGroup radiogroup1, radiogroup2;
+
+    int answer=0;
+
+    boolean a =false,b=false,c=false,d=false,e=false,f=false;
+
+    EditText edittext;
+    CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_core_java);
 
-        r1 = findViewById(R.id.b1);
-        r2 = findViewById(R.id.b2);
-        r3 = findViewById(R.id.b3);
-        r4 = findViewById(R.id.b4);
-        r5 = findViewById(R.id.b5);
-        r6 = findViewById(R.id.b6);
-        r7 = findViewById(R.id.b7);
-        r8 = findViewById(R.id.b8);
-
-        rg1 = findViewById(R.id.rg1);
-        rg2 = findViewById(R.id.rg2);
-
-        et1 = findViewById(R.id.ed);
-
-        c1 = findViewById(R.id.c1);
-        c2 = findViewById(R.id.c2);
-        c3 = findViewById(R.id.c3);
-        c4 = findViewById(R.id.c4);
-        c5 = findViewById(R.id.c5);
-
-        b1 = findViewById(R.id.btn);
-
-        b1.setOnClickListener(new View.OnClickListener() {
+        edittext = findViewById(R.id.edittext);
+        
+        btn_check_txt_answer = findViewById(R.id.btn_check_txt_answer);
+        btn_submit = findViewById(R.id.btn_submit);
+        btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String et = "",str="Java Virtual Machine";
+                if(a ==true)answer++; if(e==true)answer++; if(f==true)answer++; if(b==true && c==true && (d==false))answer++;
+                Log.e("shivam", "java" + answer );
+                Toast.makeText(getApplicationContext(),"You scored " + " " + answer , Toast.LENGTH_LONG).show();
+                answer=0;
+            }
+        });
+
+        btn_check_txt_answer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String str_et = "",str="Java Virtual Machine";
                 str=str.replaceAll("\\s+","");
-                et = et1.getText().toString();
-                et=et.replaceAll("\\s+","");
-                if(et.equals(""))
+                str_et = edittext.getText().toString();
+                str_et=str_et.replaceAll("\\s+","");
+                if(str_et.equals(""))
                 {
                         Toast.makeText(getApplicationContext(),"Invalid Input",Toast.LENGTH_SHORT).show();
-
                 }
-                else if(str.equalsIgnoreCase(et) )
+                else if(str.equalsIgnoreCase(str_et) )
                 {
                     Toast.makeText(getApplicationContext(),"Correct ",Toast.LENGTH_SHORT).show();
-
+                    a =true;
                 }
                 else
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect  ",Toast.LENGTH_SHORT).show();
-
+                    a =false;
                 }
             }
         });
 
-
-
-
    }
    public void  onCheckboxClicked(View view) {
-       // Is the button now checked?
        boolean checked = ((CheckBox) view).isChecked();
        switch (view.getId()) {
-           case R.id.c1:
+           case R.id.checkbox1:
                if (checked) {
-                   Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(), "correct - you will get point iff you select all correct options", Toast.LENGTH_SHORT).show();
+                   b=true;
                    break;
                }
-           case R.id.c2:
+               else
+               {
+                   b=false;
+               }
+           case R.id.checkbox2:
                if (checked) {
-                   Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(), "correct - you will get point iff you select all correct options", Toast.LENGTH_SHORT).show();
+                   c=true;
                    break;
                }
-           case R.id.c3:
+               else {
+                   b=false;
+               }
+           case R.id.checkbox3:
                if (checked) {
                    Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   d=true;
                    break;
                }
-           case R.id.c4:
+               else {
+                   d=false;
+               }
+           case R.id.checkbox4:
                if (checked) {
                    Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   d=true;
                    break;
                }
-           case R.id.c5:
+               else {
+                   d=false;
+               }
+           case R.id.checkbox5:
                if (checked) {
                    Toast.makeText(getApplicationContext(), "Incorrect", Toast.LENGTH_SHORT).show();
+                   d=true;
                    break;
+               }
+               else {
+                   d=false;
                }
        }
    }
 
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
+  public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
         switch (view.getId()) {
-            case R.id.b1:
+            case R.id.radiobutton1:
             if (checked)
             {
                 Toast.makeText(getApplicationContext(),"Incorrect - As Short occupies 16 bits in memory. Its range is from -32768 to 32767",Toast.LENGTH_SHORT).show();
-            //    answer++;
+                e=false;
                 break;
             }
-            case R.id.b2:
+            case R.id.radiobutton2:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-                            answer++;
+                    e=true;
                     break;
                 }
-            case R.id.b3:
+            case R.id.radiobutton3:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect - As Short occupies 16 bits in memory. Its range is from -32768 to 32767",Toast.LENGTH_SHORT).show();
-                    //         answer++;
+                    e=false;
                     break;
                 }
-            case R.id.b4:
+            case R.id.radiobutton4:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect - As Short occupies 16 bits in memory. Its range is from -32768 to 32767",Toast.LENGTH_SHORT).show();
-                    //          answer++;
+                    e=false;
                     break;
                 }
-            case R.id.b5:
+            case R.id.radiobutton5:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-                            answer++;
+                    f=true;
                     break;
                 }
-            case R.id.b6:
+            case R.id.radiobutton6:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect - As An expression involving bytes, ints, shorts, literal numbers, the entire expression is promoted to int before any calculation is done.",Toast.LENGTH_SHORT).show();
-                  //  answer++;
+                    f=false;
                     break;
                 }
-            case R.id.b7:
+            case R.id.radiobutton7:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect - As An expression involving bytes, ints, shorts, literal numbers, the entire expression is promoted to int before any calculation is done.",Toast.LENGTH_SHORT).show();
-                    //         answer++;
+                    f=false;
                     break;
                 }
-            case R.id.b8:
+            case R.id.radiobutton8:
                 if (checked) {
                     Toast.makeText(getApplicationContext(), "Incorrect - As An expression involving bytes, ints, shorts, literal numbers, the entire expression is promoted to int before any calculation is done.", Toast.LENGTH_SHORT).show();
-                    //         answer++;
+                    f=false;
                     break;
                 }
         }

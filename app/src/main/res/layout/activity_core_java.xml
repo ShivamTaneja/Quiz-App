@@ -12,7 +12,12 @@
         android:layout_height="wrap_content"
         android:background="@color/mehrun"
         android:orientation="vertical">
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/core_java"
+            android:background="@color/white"
+            />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,8 +28,6 @@
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
-
-
             />
 
         <TextView
@@ -41,11 +44,10 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-
             />
 
         <RadioGroup
-            android:id="@+id/rg1"
+            android:id="@+id/radiogroup1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -54,7 +56,7 @@
             android:padding="10dp">
 
             <RadioButton
-                android:id="@+id/b1"
+                android:id="@+id/radiobutton1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -62,11 +64,9 @@
                 android:text="@string/_128_to_127"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-
                 />
-
             <RadioButton
-                android:id="@+id/b2"
+                android:id="@+id/radiobutton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -74,13 +74,10 @@
                 android:text="@string/_32768_to_32767"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-
-
                 />
 
             <RadioButton
-                android:id="@+id/b3"
-
+                android:id="@+id/radiobutton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -88,12 +85,10 @@
                 android:text="@string/_2147483648_to_2147483647"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-
-
                 />
 
             <RadioButton
-                android:id="@+id/b4"
+                android:id="@+id/radiobutton4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -118,11 +113,10 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
-
             />
 
         <RadioGroup
-            android:id="@+id/rg2"
+            android:id="@+id/radiogroup2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -131,7 +125,7 @@
             android:padding="10dp">
 
             <RadioButton
-                android:id="@+id/b5"
+                android:id="@+id/radiobutton5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -141,7 +135,7 @@
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/b6"
+                android:id="@+id/radiobutton6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -151,7 +145,7 @@
                 android:textSize="16sp" />
 
             <RadioButton
-                android:id="@+id/b7"
+                android:id="@+id/radiobutton7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -159,12 +153,10 @@
                 android:text="@string/optbyte"
                 android:textColor="@color/white"
                 android:textSize="16sp"
-
-
                 />
 
             <RadioButton
-                android:id="@+id/b8"
+                android:id="@+id/radiobutton8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/white"
@@ -190,7 +182,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/ed"
+            android:id="@+id/edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -202,7 +194,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/btn"
+            android:id="@+id/btn_check_txt_answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/checkanswer"
@@ -213,14 +205,11 @@
             android:layout_gravity="center"
             android:background="@color/mehrun"
             android:textColor="@color/white"
-
-
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/light_Blue"/>
-
 
         <TextView
             android:layout_width="match_parent"
@@ -232,7 +221,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
         <CheckBox
-            android:id="@+id/c1"
+            android:id="@+id/checkbox1"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_width="match_parent"
@@ -242,46 +231,53 @@
             />
 
         <CheckBox
-            android:id="@+id/c2"
+            android:id="@+id/checkbox2"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/thread"
             android:onClick="onCheckboxClicked"
-
             />
         <CheckBox
-            android:id="@+id/c3"
+            android:id="@+id/checkbox3"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/thread_int_priority"
             android:onClick="onCheckboxClicked"
-
             />
         <CheckBox
-            android:id="@+id/c4"
+            android:id="@+id/checkbox4"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/thread_runnable_r_threadgroup_g"
             android:onClick="onCheckboxClicked"
-
             />
         <CheckBox
-            android:id="@+id/c5"
+            android:id="@+id/checkbox5"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/thread_runnable_r_int_priority"
             android:onClick="onCheckboxClicked"
-
             />
-
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:padding="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/mehrun"
+            android:textColor="@color/white"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="10dp"

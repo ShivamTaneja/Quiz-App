@@ -12,160 +12,148 @@ import android.widget.Toast;
 
 import javax.security.auth.login.LoginException;
 
-public class Android extends AppCompatActivity {
+class Android extends AppCompatActivity {
 
-    Button btn;
-    RadioButton r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16;
-    RadioGroup rg1, rg2, rg3, rg4;
+    Button btn_submit;
+
+    RadioButton radiobutton1,radiobutton2,radiobutton3,radiobutton4,radiobutton5,radiobutton6,radiobutton7,radiobutton8,radiobutton9,radiobutton10,radiobutton11,radiobutton12,radiobutton13,radiobutton14,radiobutton15,radiobutton16;
+    RadioGroup radiogroup1, radiogroup2, radiogroup3, radiogroup4;
+
     int answer=0;
+
+    boolean a=false,b=false,c=false,d=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android);
 
-        r1 = findViewById(R.id.b1);
-        r2 = findViewById(R.id.b2);
-        r3 = findViewById(R.id.b3);
-        r4 = findViewById(R.id.b4);
-        r5 = findViewById(R.id.b5);
-        r6 = findViewById(R.id.b6);
-        r7 = findViewById(R.id.b7);
-        r8 = findViewById(R.id.b8);
-        r9 = findViewById(R.id.b9);
-        r10 = findViewById(R.id.b10);
-        r11 = findViewById(R.id.b11);
-        r12 = findViewById(R.id.b12);
-        r13 = findViewById(R.id.b13);
-        r14 = findViewById(R.id.b14);
-        r15 = findViewById(R.id.b15);
-        r16 = findViewById(R.id.b16);
+        btn_submit = findViewById(R.id.btn_submit);
+        btn_submit.setOnClickListener(
+                new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        rg1 = findViewById(R.id.rg1);
-        rg2 = findViewById(R.id.rg2);
-        rg3 = findViewById(R.id.rg3);
-        rg4 = findViewById(R.id.rg4);
-
-
-
-
+                if(a==true)answer++; if(b==true)answer++; if(c==true)answer++; if(d==true)answer++;
+                Log.e("shivam", "answer" + answer );
+                Toast.makeText(getApplicationContext(),"You scored " + " " + answer , Toast.LENGTH_LONG).show();
+                answer=0;
+            }
+        });
     }
 
     public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
         switch(view.getId()) {
-            case R.id.b1:
+            case R.id.radiobutton1:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-                    answer++;
+                    a=true;
                     break;
                 }
-            case R.id.b2:
+            case R.id.radiobutton2:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-         //           answer++;
+                    a=false;
                     break;
                 }
-            case R.id.b3:
+            case R.id.radiobutton3:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-           //         answer++;
+                    a=false;
                     break;
                 }
-            case R.id.b4:
+            case R.id.radiobutton4:
                 if (checked)
                 {
                   Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-          //          answer++;
+                    a=false;
                     break;
                 }
-            case R.id.b5:
+            case R.id.radiobutton5:
                 if (checked)
                 {
                   Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-          //          answer++;
+                    b=false;
                     break;
                 }
-            case R.id.b6:
+            case R.id.radiobutton6:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-                    answer++;
+                    b=true;
                     break;
                 }
-            case R.id.b7:
+            case R.id.radiobutton7:
                 if (checked)
                 {
                    Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-           //         answer++;
+                    b=false;
                     break;
                 }
-            case R.id.b8:
+            case R.id.radiobutton8:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-           //         answer++;
+                    b=false;
                     break;
                 }
-            case R.id.b9:
+            case R.id.radiobutton9:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-           //         answer++;
+                    c=false;
                     break;
                 }
-            case R.id.b10:
+            case R.id.radiobutton10:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-               //     answer++;
+                    c=false;
                     break;
                 }
-            case R.id.b11:
+            case R.id.radiobutton11:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-        //            answer++;
+                    c=true;
                     break;
                 }
-            case R.id.b12:
+            case R.id.radiobutton12:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-               //     answer++;
+                    c=false;
                     break;
                 }
-            case R.id.b13:
+            case R.id.radiobutton13:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-               //     answer++;
+                    d=false;
                     break;
                 }
-            case R.id.b14:
+            case R.id.radiobutton14:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-                 //   answer++;
+                    d=false;
                     break;
                 }
-            case R.id.b15:
+            case R.id.radiobutton15:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect",Toast.LENGTH_SHORT).show();
-                   // answer++;
+                    d=false;
                     break;
                 }
-            case R.id.b16:
+            case R.id.radiobutton16:
                 if (checked)
                 {
                     Toast.makeText(getApplicationContext(),"correct",Toast.LENGTH_SHORT).show();
-                    answer++;
+                    d=true;
                     break;
                 }
         }

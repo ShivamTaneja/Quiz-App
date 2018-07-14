@@ -47,4 +47,6 @@
     <string name="thread">Thread()</string>
     <string name="thread_runnable_r_string_name">Thread(Runnable r, String name)</string>
     <string name="checkanswer">Check your answer</string>
+    <string name="for_correct_answer_1"><![CDATA[For correct answer --> +1]]></string>
+    <string name="for_incorrect_answer_1"><![CDATA[For incorrect answer --> 0]]></string>
 </resources>

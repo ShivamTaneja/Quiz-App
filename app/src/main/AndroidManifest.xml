@@ -21,7 +21,6 @@
         </activity>
         <activity android:name=".Android" />
         <activity android:name=".CoreJava" />
-        <activity android:name=".Result"></activity>
     </application>
 
 </manifest>
