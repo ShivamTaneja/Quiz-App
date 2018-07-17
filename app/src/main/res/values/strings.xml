@@ -5,4 +5,10 @@
     <string name="xml">Xml</string>
     <string name="sql">Sql</string>
     <string name="core_java">Core Java</string>
+    <string name="play">Play</string>
+    <string name="statistics">Statistics</string>
+    <string name="attempted_questions">Attempted Questions :</string>
+    <string name="correct">Correct :</string>
+    <string name="incorrect">Incorrect :</string>
+    <string name="gettings_ques_rdy">Getting Questions Ready ...</string>
 </resources>

@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Statistics"
+        android:text="@string/statistics"
         android:textAlignment="center"
         android:textSize="48sp" />
 
@@ -41,7 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Attempted Questions :"
+            android:text="@string/attempted_questions"
             android:textColor="#d4ce2e"
             android:textSize="24sp" />
 
@@ -61,7 +61,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correct                          :"
+            android:text="@string/correct"
             android:textColor="#51b364"
             android:textSize="24sp" />
 
@@ -81,7 +81,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Incorrect                       :"
+            android:text="@string/incorrect"
             android:textColor="#e9403d"
             android:textSize="24sp" />
 
