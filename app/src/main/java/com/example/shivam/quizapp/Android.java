@@ -118,7 +118,7 @@ public class Android extends SQLiteOpenHelper {
         return db != null ? true : false;
 
     }
-// uppload to github,update resume,recharge
+
     public String readQuestion(int i)//Used to read the data from the Des.db file where id is given and we choose id randomly
     {
 
